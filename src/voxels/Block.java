@@ -12,18 +12,26 @@ package voxels;
 public class Block {
 
     private boolean active;
+    private boolean marked;
 
     public Block() {
         active = true;
+        marked = false;
     }
 
 
     public boolean isActive() {
         return active;
     }
+    public boolean isMarked() {
+        return marked;
+    }
 
     public void deactivate() {
         this.active = false;
+    }
+    public void markToDeactivate() {
+        this.marked = true;
     }
 
     public void activate() {
